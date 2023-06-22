@@ -1,0 +1,43 @@
+﻿using Composite_Exercicio;
+
+var grupoA = new Grupo("A) Português ");
+var questao1 = new Questao("Quando usamos a crase");
+var questao2 = new Questao("Qual o sinônimo de rápido");
+
+grupoA.Add(questao1);
+grupoA.Add(questao2);
+
+var grupoB = new Grupo("B) Física");
+var grupoB1 = new Grupo("B1) Mecânica");
+var questao3 = new Questao("O que é velocidade média");
+var questao4 = new Questao("O que é aceleração");
+
+grupoB1.Add(questao3);
+grupoB1.Add(questao4);
+
+var grupoB2 = new Grupo("B2) Óptica");
+var questao5 = new Questao("O que é refração");
+var questao6 = new Questao("Qual a velocidade da luz");
+
+grupoB2.Add(questao5);
+grupoB2.Add(questao6);
+
+grupoB.Add(grupoB1);
+grupoB.Add(grupoB2);
+
+//Matematica
+var grupoC = new Grupo("C) Matemática");
+var questao7 = new Questao("Qual a raiz quadrada de 126 ?");
+var questao8 = new Questao("Qual o valor do número Pi ?");
+
+grupoC.Add(questao7);
+grupoC.Add(questao8);
+
+var grupoRaiz = new Grupo("Questionário");
+grupoRaiz.Add(grupoA);
+grupoRaiz.Add(grupoB);
+grupoRaiz.Add(grupoC);
+
+//exibir 
+grupoRaiz.Exibir();
+Console.ReadKey();
